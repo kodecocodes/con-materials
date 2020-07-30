@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u5d-n6-qLR">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tilt Shift Table View Controller-->
+        <scene sceneID="xwl-r7-4Uj">
+            <objects>
+                <tableViewController id="u5d-n6-qLR" customClass="TiltShiftTableViewController" customModule="Concurrency" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="315" estimatedRowHeight="315" sectionHeaderHeight="28" sectionFooterHeight="28" id="bY9-vg-uRV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="normal" rowHeight="315" id="96b-k1-mKd" customClass="PhotoCell" customModule="Concurrency" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="315"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="96b-k1-mKd" id="zss-oW-rkG">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="314.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MWU-yM-id8">
+                                            <rect key="frame" x="22.5" y="11" width="275" height="275"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="275" id="VZl-UJ-E3B"/>
+                                                <constraint firstAttribute="height" constant="275" id="lGg-8J-tmb"/>
+                                            </constraints>
+                                        </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Sqa-Gn-bpd">
+                                            <rect key="frame" x="150" y="138.5" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="MWU-yM-id8" firstAttribute="centerX" secondItem="zss-oW-rkG" secondAttribute="centerX" id="05e-kl-VdF"/>
+                                        <constraint firstItem="Sqa-Gn-bpd" firstAttribute="centerY" secondItem="MWU-yM-id8" secondAttribute="centerY" id="7jM-jc-k0q"/>
+                                        <constraint firstItem="MWU-yM-id8" firstAttribute="top" secondItem="zss-oW-rkG" secondAttribute="topMargin" id="9bZ-uJ-lu8"/>
+                                        <constraint firstItem="Sqa-Gn-bpd" firstAttribute="centerX" secondItem="MWU-yM-id8" secondAttribute="centerX" id="jir-fS-iy7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="Sqa-Gn-bpd" id="byP-1m-oyV"/>
+                                    <outlet property="nasaImageView" destination="MWU-yM-id8" id="bqX-Dp-73H"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u5d-n6-qLR" id="s78-XF-vxo"/>
+                            <outlet property="delegate" destination="u5d-n6-qLR" id="KVP-Gf-cfG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ntr-Cl-l5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="10"/>
+        </scene>
+    </scenes>
+</document>
