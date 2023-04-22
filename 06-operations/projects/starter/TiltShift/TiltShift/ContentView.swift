@@ -8,7 +8,7 @@ struct ContentView: View {
       }
 
       NavigationLink("Show Table") {
-
+        TableView()
       }
       .padding()
     }

@@ -1,12 +1,13 @@
-import UIKit
+import SwiftUI
 
 final class TiltShiftOperation: Operation {
   private static let context = CIContext()
-  var outputImage: UIImage?
+
+  var outputImage: Image?
 
   private let inputImage: UIImage
 
-  init(for image: UIImage) {
+  init(image: UIImage) {
     inputImage = image
     super.init()
   }
@@ -26,6 +27,6 @@ final class TiltShiftOperation: Operation {
       return
     }
 
-    outputImage = UIImage(cgImage: cgImage)
+    outputImage = Image(decorative: cgImage, scale: 1)
   }
 }

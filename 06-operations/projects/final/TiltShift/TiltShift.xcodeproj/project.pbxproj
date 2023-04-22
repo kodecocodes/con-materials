@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D282038329F48F20006988AF /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D282038229F48F20006988AF /* TableView.swift */; };
+		D282038529F48F45006988AF /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D282038429F48F45006988AF /* ImageView.swift */; };
 		D2A721A129BCE26B0021A4C5 /* TiltShiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721A029BCE26B0021A4C5 /* TiltShiftApp.swift */; };
 		D2A721A329BCE26B0021A4C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721A229BCE26B0021A4C5 /* ContentView.swift */; };
 		D2A721A529BCE26C0021A4C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A721A429BCE26C0021A4C5 /* Assets.xcassets */; };
 		D2A721A829BCE26C0021A4C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A721A729BCE26C0021A4C5 /* Preview Assets.xcassets */; };
 		D2A721AF29BCE56E0021A4C5 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721AE29BCE56E0021A4C5 /* ExampleView.swift */; };
 		D2A721B129BCE8360021A4C5 /* TiltShiftFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721B029BCE8360021A4C5 /* TiltShiftFilter.swift */; };
-		D2A721B329BCEC120021A4C5 /* TiltShiftOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721B229BCEC120021A4C5 /* TiltShiftOperation.swift */; };
-		D2A721B529BCEC550021A4C5 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721B429BCEC550021A4C5 /* TableView.swift */; };
-		D2A721B929BCEE580021A4C5 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721B829BCEE580021A4C5 /* ImageView.swift */; };
+		D2FC87DD29F4940700601576 /* TiltShiftOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FC87DC29F4940700601576 /* TiltShiftOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D282038229F48F20006988AF /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		D282038429F48F45006988AF /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		D2A7219D29BCE26B0021A4C5 /* TiltShift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiltShift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A721A029BCE26B0021A4C5 /* TiltShiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftApp.swift; sourceTree = "<group>"; };
 		D2A721A229BCE26B0021A4C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,9 +28,7 @@
 		D2A721A729BCE26C0021A4C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2A721AE29BCE56E0021A4C5 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
 		D2A721B029BCE8360021A4C5 /* TiltShiftFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftFilter.swift; sourceTree = "<group>"; };
-		D2A721B229BCEC120021A4C5 /* TiltShiftOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftOperation.swift; sourceTree = "<group>"; };
-		D2A721B429BCEC550021A4C5 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
-		D2A721B829BCEE580021A4C5 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		D2FC87DC29F4940700601576 /* TiltShiftOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +65,11 @@
 			children = (
 				D2A721A229BCE26B0021A4C5 /* ContentView.swift */,
 				D2A721AE29BCE56E0021A4C5 /* ExampleView.swift */,
-				D2A721B829BCEE580021A4C5 /* ImageView.swift */,
-				D2A721B429BCEC550021A4C5 /* TableView.swift */,
+				D282038429F48F45006988AF /* ImageView.swift */,
+				D282038229F48F20006988AF /* TableView.swift */,
 				D2A721A029BCE26B0021A4C5 /* TiltShiftApp.swift */,
 				D2A721B029BCE8360021A4C5 /* TiltShiftFilter.swift */,
-				D2A721B229BCEC120021A4C5 /* TiltShiftOperation.swift */,
+				D2FC87DC29F4940700601576 /* TiltShiftOperation.swift */,
 				D2A721A429BCE26C0021A4C5 /* Assets.xcassets */,
 				D2A721A629BCE26C0021A4C5 /* Preview Content */,
 			);
@@ -155,12 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2A721B329BCEC120021A4C5 /* TiltShiftOperation.swift in Sources */,
-				D2A721B529BCEC550021A4C5 /* TableView.swift in Sources */,
+				D282038529F48F45006988AF /* ImageView.swift in Sources */,
 				D2A721A329BCE26B0021A4C5 /* ContentView.swift in Sources */,
+				D2FC87DD29F4940700601576 /* TiltShiftOperation.swift in Sources */,
+				D282038329F48F20006988AF /* TableView.swift in Sources */,
 				D2A721B129BCE8360021A4C5 /* TiltShiftFilter.swift in Sources */,
 				D2A721A129BCE26B0021A4C5 /* TiltShiftApp.swift in Sources */,
-				D2A721B929BCEE580021A4C5 /* ImageView.swift in Sources */,
 				D2A721AF29BCE56E0021A4C5 /* ExampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
