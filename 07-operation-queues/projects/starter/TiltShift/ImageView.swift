@@ -14,15 +14,13 @@ struct ImageView: View {
   }
 
   private func tiltShiftImage() {
-    let uiImage = UIImage(named: "\(rowNumber).png")!
-
-    print("Filtering row \(rowNumber + 1)")
-
-    let op = TiltShiftOperation(for: uiImage)
+    print("Filtering")
+    let op = TiltShiftOperation(image: UIImage(named: "\(rowNumber).png")!)
     op.start()
 
     if let outputImage = op.outputImage {
-      image = Image(uiImage: outputImage)
+      print("Updating image")
+      image = outputImage
     }
 
     print("Done")

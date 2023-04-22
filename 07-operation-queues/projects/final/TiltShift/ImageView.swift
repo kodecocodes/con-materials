@@ -3,31 +3,33 @@ import SwiftUI
 struct ImageView: View {
   let rowNumber: Int
   let queue: OperationQueue
-
   @State private var image = Image(systemName: "photo")
 
-  var body: some View {
-    image
-      .resizable()
-      .frame(width: 293, height: 293)
-      .task {
-        tiltShiftImage()
-      }
-  }
-
-  init(for rowNumber: Int, in queue: OperationQueue) {
+  init(in queue: OperationQueue, for rowNumber: Int) {
     self.rowNumber = rowNumber
     self.queue = queue
   }
 
+  var body: some View {
+    ZStack {
+      image
+        .resizable()
+        .frame(width: 293, height: 293)
+        .task {
+          tiltShiftImage()
+        }
+    }
+  }
+
   private func tiltShiftImage() {
-    let uiImage = UIImage(named: "\(rowNumber).png")!
-    let op = TiltShiftOperation(for: uiImage)
+    print("Filtering")
+    let op = TiltShiftOperation(image: UIImage(named: "\(rowNumber).png")!)
 
     op.completionBlock = {
       if let outputImage = op.outputImage {
         DispatchQueue.main.async {
-          image = Image(uiImage: outputImage)
+          print("Updating image")
+          image = outputImage
         }
       }
     }
@@ -38,6 +40,6 @@ struct ImageView: View {
 
 struct ImageView_Previews: PreviewProvider {
   static var previews: some View {
-    ImageView(for: Int.random(in: 0 ..< 10), in: OperationQueue())
+    ImageView(in: OperationQueue(), for: Int.random(in: 0 ..< 10))
   }
 }
