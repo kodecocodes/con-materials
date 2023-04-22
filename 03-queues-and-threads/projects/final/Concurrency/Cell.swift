@@ -13,6 +13,21 @@ struct Cell: View {
       }
   }
 
+  private func downloadWithGlobalQueue() {
+    DispatchQueue.global(qos: .utility).async {
+      guard
+        let data = try? Data(contentsOf: url),
+        let uiImage = UIImage(data: data)
+      else {
+        return
+      }
+
+      DispatchQueue.main.async {
+        image = Image(uiImage: uiImage)
+      }
+    }
+  }
+
   private func downloadWithUrlSession() {
     URLSession.shared.dataTask(with: url) { data, _, _ in
       guard let data, let uiImage = UIImage(data: data) else {
@@ -24,19 +39,5 @@ struct Cell: View {
       }
     }
     .resume()
-  }
-
-  private func downloadWithGlobalQueue() {
-    DispatchQueue.global(qos: .utility).async {
-      guard
-        let data = try? Data(contentsOf: url),
-        let uiImage = UIImage(data: data) else {
-        return
-      }
-
-      DispatchQueue.main.async {
-        image = Image(uiImage: uiImage)
-      }
-    }
   }
 }
