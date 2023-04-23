@@ -20,7 +20,7 @@ struct ImageView: View {
 
     if let outputImage = op.outputImage {
       print("Updating image")
-      image = outputImage
+      image = Image(uiImage: outputImage)
     }
 
     print("Done")
