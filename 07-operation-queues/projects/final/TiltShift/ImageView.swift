@@ -29,7 +29,7 @@ struct ImageView: View {
       if let outputImage = op.outputImage {
         DispatchQueue.main.async {
           print("Updating image")
-          image = outputImage
+          image = Image(uiImage: outputImage)
         }
       }
     }
