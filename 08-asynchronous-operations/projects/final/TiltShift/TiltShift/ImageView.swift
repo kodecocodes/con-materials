@@ -26,7 +26,7 @@ struct ImageView: View {
     op.completionBlock = {
       if let outputImage = op.image {
         DispatchQueue.main.async {
-          image = outputImage
+          image = Image(uiImage: outputImage)
         }
       }
     }

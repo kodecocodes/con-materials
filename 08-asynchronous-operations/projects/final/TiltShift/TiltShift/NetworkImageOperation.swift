@@ -1,9 +1,9 @@
-import SwiftUI
+import UIKit
 
 typealias ImageOperationCompletion = ((Data?, URLResponse?, Error?) -> Void)?
 
 final class NetworkImageOperation: AsyncOperation {
-  var image: Image?
+  var image: UIImage?
 
   private let url: URL
   private let completion: ImageOperationCompletion
@@ -33,16 +33,9 @@ final class NetworkImageOperation: AsyncOperation {
         return
       }
 
-      guard
-        error == nil,
-        let data = data,
-        let uiImage = UIImage(data: data)
-      else {
-        return
+      guard error == nil, let data = data else { return }
 
-      }
-
-      self.image = Image(uiImage: uiImage)
+      self.image = UIImage(data: data)
     }.resume()
   }
 }
