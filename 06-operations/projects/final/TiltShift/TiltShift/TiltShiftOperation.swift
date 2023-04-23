@@ -3,7 +3,7 @@ import SwiftUI
 final class TiltShiftOperation: Operation {
   private static let context = CIContext()
 
-  var outputImage: Image?
+  var outputImage: UIImage?
 
   private let inputImage: UIImage
 
@@ -27,6 +27,6 @@ final class TiltShiftOperation: Operation {
       return
     }
 
-    outputImage = Image(decorative: cgImage, scale: 1)
+    outputImage = UIImage(cgImage: cgImage)
   }
 }
