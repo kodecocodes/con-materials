@@ -45,13 +45,13 @@ let queue = DispatchQueue.global(qos: .userInitiated)
 
 queue.async(group: group) {
     print("Start job 1")
-    Thread.sleep(until: Date().addingTimeInterval(10))
+    Thread.sleep(until: .now + 10)
     print("End job 1")
 }
 
 queue.async(group: group) {
     print("Start job 2")
-    Thread.sleep(until: Date().addingTimeInterval(2))
+    Thread.sleep(until: .now + 2)
     print("End job 2")
 }
 
