@@ -13,6 +13,7 @@ struct ContentView: View {
       }
     }
     .padding()
+    .edgesIgnoringSafeArea(.bottom)
     .task { loadImageDetails() }
   }
 

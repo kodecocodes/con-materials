@@ -9,22 +9,22 @@ struct Cell: View {
       .resizable()
       .frame(width: 100, height: 100)
       .task {
-        downloadWithGlobalQueue()
+        downloadWithUrlSession()
       }
   }
 
   private func downloadWithGlobalQueue() {
     DispatchQueue.global(qos: .utility).async {
-      guard
-        let data = try? Data(contentsOf: url),
-        let uiImage = UIImage(data: data)
-      else {
-        return
-      }
+        guard
+          let data = try? Data(contentsOf: url),
+          let uiImage = UIImage(data: data)
+        else {
+          return
+        }
 
-      DispatchQueue.main.async {
-        image = Image(uiImage: uiImage)
-      }
+        DispatchQueue.main.async {
+          image = Image(uiImage: uiImage)
+        }
     }
   }
 
