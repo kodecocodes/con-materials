@@ -3,8 +3,6 @@ import SwiftUI
 struct ContentView: View {
   @State private var counter = 0
 
-  @State private var lazyName = "Foo bar"
-
   var body: some View {
     VStack {
       Text("HI")
@@ -16,31 +14,23 @@ struct ContentView: View {
   }
 
   private func count() {
-    DispatchQueue.global().async {
-      lazyName = "blob"
-    }
-
-    print(lazyName)
-    print("Counting")
     let queue = DispatchQueue(label: "q")
 
-    queue.async {
-      print("Queue start")
-      for _ in 1 ... 100_000 {
-        // Thread.sleep(forTimeInterval: 0.1)
-        counter += 1
-      }
+    var count = 0
 
-      print("queue done")
+    queue.async {
+      for _ in 1 ... 100_000 {
+        Thread.sleep(forTimeInterval: 0.1)
+        count += 1
+      }
     }
 
     DispatchQueue.main.async {
-      print("Main start")
       for _ in 1 ... 100_000 {
-        counter += 1
+        count += 1
       }
 
-      print("Main done")
+      counter = count
     }
   }
 }

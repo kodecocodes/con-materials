@@ -14,6 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D270EB6B2A2BA92000C0FABA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D2F273BF29F609E7003517B7 /* Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F273C229F609E7003517B7 /* ConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyApp.swift; sourceTree = "<group>"; };
 		D2F273C429F609E7003517B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +36,7 @@
 		D2F273B629F609E7003517B7 = {
 			isa = PBXGroup;
 			children = (
+				D270EB6B2A2BA92000C0FABA /* LICENSE */,
 				D2F273C129F609E7003517B7 /* Concurrency */,
 				D2F273C029F609E7003517B7 /* Products */,
 			);
