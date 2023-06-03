@@ -8,7 +8,7 @@ struct ContentView: View {
   @State private var progress = 0.0
   @Environment(\.managedObjectContext) private var viewContext
 
-  private let doItWrong = true
+  private let passActualObject = true
   private let formatter = NumberFormatter()
 
   var body: some View {
@@ -34,7 +34,7 @@ struct ContentView: View {
     .task {
       formatter.numberStyle = .spellOut
 
-      let callback = doItWrong ? doItTheWrongWay : doItTheRightWay
+      let callback = passActualObject ? doItTheWrongWay : doItTheRightWay
       Notification.Name.coreDataEntity.onPost(using: callback)
     }
   }
@@ -45,7 +45,7 @@ struct ContentView: View {
     }
 
     viewContext.perform {
-      let message = entity.display ?? "WTF"
+      let message = entity.display ?? "This would crash."
 
       DispatchQueue.main.async {
         display = message
@@ -108,15 +108,15 @@ struct ContentView: View {
         progress = 0
       }
 
-  let random = Int.random(in: 1 ... Int(max))
+      let random = Int.random(in: 1 ... Int(max))
 
-  let request = Number.fetchRequest()
-  request.predicate = NSPredicate(format: "%K == %d", #keyPath(Number.value), random)
-  request.fetchLimit = 1
+      let request = Number.fetchRequest()
+      request.predicate = NSPredicate(format: "%K == %d", #keyPath(Number.value), random)
+      request.fetchLimit = 1
 
-  guard
-    let entities = try? context.fetch(request),
-    let entity = entities.first
+      guard
+        let entities = try? context.fetch(request),
+        let entity = entities.first
       else {
         DispatchQueue.main.async {
           alert = AlertMessage(message: "Failed to retrieve core data object")
@@ -127,7 +127,7 @@ struct ContentView: View {
 
       var userInfo: [String: Any] = [:]
 
-      if doItWrong {
+      if passActualObject {
         userInfo["object"] = entity
       } else {
         userInfo["objectID"] = entity.objectID
