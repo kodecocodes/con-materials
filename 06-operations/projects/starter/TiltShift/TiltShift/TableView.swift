@@ -2,12 +2,12 @@ import SwiftUI
 
 struct TableView: View {
   var body: some View {
-    ScrollView {
+    List {
       ForEach(0 ..< 10) { rowNumber in
         ImageView(rowNumber: rowNumber)
           .padding()
       }
-    }
+    }.listStyle(.plain)
   }
 }
 

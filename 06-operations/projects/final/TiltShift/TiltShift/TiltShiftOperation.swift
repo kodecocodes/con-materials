@@ -1,8 +1,16 @@
+//
+//  TiltShiftOperation.swift
+//  TiltShift
+//
+//  Created by Marin Bencevic on 05.06.2023..
+//  Copyright © 2023 Kodeco, Inc. All rights reserved.
+//
+
+import Foundation
 import SwiftUI
 
 final class TiltShiftOperation: Operation {
   private static let context = CIContext()
-
   var outputImage: UIImage?
 
   private let inputImage: UIImage
@@ -30,3 +38,5 @@ final class TiltShiftOperation: Operation {
     outputImage = UIImage(cgImage: cgImage)
   }
 }
+
+

@@ -15,7 +15,7 @@
 		D2A721A829BCE26C0021A4C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A721A729BCE26C0021A4C5 /* Preview Assets.xcassets */; };
 		D2A721AF29BCE56E0021A4C5 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721AE29BCE56E0021A4C5 /* ExampleView.swift */; };
 		D2A721B129BCE8360021A4C5 /* TiltShiftFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721B029BCE8360021A4C5 /* TiltShiftFilter.swift */; };
-		D2FC87DD29F4940700601576 /* TiltShiftOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FC87DC29F4940700601576 /* TiltShiftOperation.swift */; };
+		F5A562612A2DC66300AB3C7D /* TiltShiftOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A562602A2DC66300AB3C7D /* TiltShiftOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		D2A721A729BCE26C0021A4C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2A721AE29BCE56E0021A4C5 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
 		D2A721B029BCE8360021A4C5 /* TiltShiftFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftFilter.swift; sourceTree = "<group>"; };
-		D2FC87DC29F4940700601576 /* TiltShiftOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftOperation.swift; sourceTree = "<group>"; };
+		F5A562602A2DC66300AB3C7D /* TiltShiftOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +63,13 @@
 		D2A7219F29BCE26B0021A4C5 /* TiltShift */ = {
 			isa = PBXGroup;
 			children = (
+				F5A562602A2DC66300AB3C7D /* TiltShiftOperation.swift */,
 				D2A721A229BCE26B0021A4C5 /* ContentView.swift */,
 				D2A721AE29BCE56E0021A4C5 /* ExampleView.swift */,
 				D282038429F48F45006988AF /* ImageView.swift */,
 				D282038229F48F20006988AF /* TableView.swift */,
 				D2A721A029BCE26B0021A4C5 /* TiltShiftApp.swift */,
 				D2A721B029BCE8360021A4C5 /* TiltShiftFilter.swift */,
-				D2FC87DC29F4940700601576 /* TiltShiftOperation.swift */,
 				D2A721A429BCE26C0021A4C5 /* Assets.xcassets */,
 				D2A721A629BCE26C0021A4C5 /* Preview Content */,
 			);
@@ -157,7 +157,7 @@
 			files = (
 				D282038529F48F45006988AF /* ImageView.swift in Sources */,
 				D2A721A329BCE26B0021A4C5 /* ContentView.swift in Sources */,
-				D2FC87DD29F4940700601576 /* TiltShiftOperation.swift in Sources */,
+				F5A562612A2DC66300AB3C7D /* TiltShiftOperation.swift in Sources */,
 				D282038329F48F20006988AF /* TableView.swift in Sources */,
 				D2A721B129BCE8360021A4C5 /* TiltShiftFilter.swift in Sources */,
 				D2A721A129BCE26B0021A4C5 /* TiltShiftApp.swift in Sources */,
