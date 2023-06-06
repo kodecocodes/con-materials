@@ -1,4 +1,4 @@
-/// Copyright (c) 2019 Razeware LLC
+/// Copyright (c) 2023 Kodeco, Inc.
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -17,6 +17,10 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
+///
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
 ///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -41,13 +45,13 @@ let queue = DispatchQueue.global(qos: .userInitiated)
 
 queue.async(group: group) {
     print("Start job 1")
-    Thread.sleep(until: Date().addingTimeInterval(10))
+    Thread.sleep(until: .now + 10)
     print("End job 1")
 }
 
 queue.async(group: group) {
     print("Start job 2")
-    Thread.sleep(until: Date().addingTimeInterval(2))
+    Thread.sleep(until: .now + 2)
     print("End job 2")
 }
 
