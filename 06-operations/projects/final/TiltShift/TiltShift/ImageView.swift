@@ -1,0 +1,34 @@
+import SwiftUI
+
+struct ImageView: View {
+  @State private var image = Image(systemName: "photo")
+  let rowNumber: Int
+
+  var body: some View {
+    image
+      .resizable()
+      .frame(width: 293, height: 293)
+      .task {
+        tiltShiftImage()
+      }
+  }
+
+  private func tiltShiftImage() {
+    print("Filtering")
+    let op = TiltShiftOperation(image: UIImage(named: "\(rowNumber).png")!)
+    op.start()
+
+    if let outputImage = op.outputImage {
+      print("Updating image")
+      image = Image(uiImage: outputImage)
+    }
+
+    print("Done")
+  }
+}
+
+struct ImageView_Previews: PreviewProvider {
+  static var previews: some View {
+    ImageView(rowNumber: Int.random(in: 0 ..< 10))
+  }
+}
