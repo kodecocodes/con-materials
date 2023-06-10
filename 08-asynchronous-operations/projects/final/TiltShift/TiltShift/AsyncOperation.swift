@@ -20,21 +20,10 @@ class AsyncOperation: Operation {
     }
   }
 
-  override var isReady: Bool {
-    return super.isReady && state == .ready
-  }
-
-  override var isExecuting: Bool {
-    return state == .executing
-  }
-
-  override var isFinished: Bool {
-    return state == .finished
-  }
-
-  override var isAsynchronous: Bool {
-    return true
-  }
+  override var isReady: Bool { super.isReady && state == .ready }
+  override var isExecuting: Bool { state == .executing }
+  override var isFinished: Bool { state == .finished }
+  override var isAsynchronous: Bool { true }
 
   override func start() {
     main()

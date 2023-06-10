@@ -1,3 +1,12 @@
+//
+//  NetworkImageOperation.swift
+//  TiltShift
+//
+//  Created by Marin Bencevic on 10.06.2023..
+//  Copyright © 2023 Kodeco, Inc. All rights reserved.
+//
+
+import Foundation
 import UIKit
 
 typealias ImageOperationCompletion = ((Data?, URLResponse?, Error?) -> Void)?
@@ -8,7 +17,7 @@ final class NetworkImageOperation: AsyncOperation {
   private let url: URL
   private let completion: ImageOperationCompletion
 
-  init(url: URL,completion: ImageOperationCompletion = nil) {
+  init(url: URL, completion: ImageOperationCompletion = nil) {
     self.url = url
     self.completion = completion
 
@@ -21,9 +30,7 @@ final class NetworkImageOperation: AsyncOperation {
   }
 
   override func main() {
-    URLSession.shared.dataTask(with: url) {
-      [weak self] data, response, error in
-
+    URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
       guard let self else { return }
 
       defer { self.state = .finished }

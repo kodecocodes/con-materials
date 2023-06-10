@@ -17,8 +17,8 @@
 		D2A721B329BCEC120021A4C5 /* TiltShiftOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721B229BCEC120021A4C5 /* TiltShiftOperation.swift */; };
 		D2A721B529BCEC550021A4C5 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721B429BCEC550021A4C5 /* TableView.swift */; };
 		D2A721B929BCEE580021A4C5 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721B829BCEE580021A4C5 /* ImageView.swift */; };
-		D2DC537629F4A63A00D47544 /* NetworkImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC537529F4A63A00D47544 /* NetworkImageOperation.swift */; };
 		D2FA847F29BCFBDD00B39695 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2FA847E29BCFBDD00B39695 /* Photos.plist */; };
+		F50BEA8A2A34CC93009F87A5 /* NetworkImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BEA892A34CC93009F87A5 /* NetworkImageOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		D2A721B229BCEC120021A4C5 /* TiltShiftOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftOperation.swift; sourceTree = "<group>"; };
 		D2A721B429BCEC550021A4C5 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		D2A721B829BCEE580021A4C5 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
-		D2DC537529F4A63A00D47544 /* NetworkImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageOperation.swift; sourceTree = "<group>"; };
 		D2FA847E29BCFBDD00B39695 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
+		F50BEA892A34CC93009F87A5 /* NetworkImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,13 +74,13 @@
 				D2A721A229BCE26B0021A4C5 /* ContentView.swift */,
 				D2A721AE29BCE56E0021A4C5 /* ExampleView.swift */,
 				D2A721B829BCEE580021A4C5 /* ImageView.swift */,
-				D2DC537529F4A63A00D47544 /* NetworkImageOperation.swift */,
 				D2A721B429BCEC550021A4C5 /* TableView.swift */,
 				D2A721A029BCE26B0021A4C5 /* TiltShiftApp.swift */,
 				D2A721B029BCE8360021A4C5 /* TiltShiftFilter.swift */,
 				D2A721B229BCEC120021A4C5 /* TiltShiftOperation.swift */,
 				D2A721A429BCE26C0021A4C5 /* Assets.xcassets */,
 				D2A721A629BCE26C0021A4C5 /* Preview Content */,
+				F50BEA892A34CC93009F87A5 /* NetworkImageOperation.swift */,
 			);
 			path = TiltShift;
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 			files = (
 				D2A721B329BCEC120021A4C5 /* TiltShiftOperation.swift in Sources */,
 				D2A721B529BCEC550021A4C5 /* TableView.swift in Sources */,
-				D2DC537629F4A63A00D47544 /* NetworkImageOperation.swift in Sources */,
+				F50BEA8A2A34CC93009F87A5 /* NetworkImageOperation.swift in Sources */,
 				D2A721A329BCE26B0021A4C5 /* ContentView.swift in Sources */,
 				D2A721B129BCE8360021A4C5 /* TiltShiftFilter.swift in Sources */,
 				D2A721A129BCE26B0021A4C5 /* TiltShiftApp.swift in Sources */,
@@ -302,7 +302,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TiltShift/Preview Content\"";
-				DEVELOPMENT_TEAM = BQUPLV7KWS;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -331,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TiltShift/Preview Content\"";
-				DEVELOPMENT_TEAM = BQUPLV7KWS;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
