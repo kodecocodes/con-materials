@@ -33,7 +33,7 @@ final class NetworkImageOperation: AsyncOperation {
         return
       }
 
-      guard error == nil, let data = data else { return }
+      guard error == nil, let data else { return }
 
       self.image = UIImage(data: data)
     }.resume()

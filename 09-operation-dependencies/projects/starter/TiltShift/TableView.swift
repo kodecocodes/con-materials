@@ -7,14 +7,13 @@ struct TableView: View {
   private let columns = [GridItem(.flexible())]
 
   var body: some View {
-    ScrollView {
-      LazyVGrid(columns: columns) {
-        ForEach(urls, id: \.self) { url in
-          ImageView(in: queue, for: url)
-            .padding()
-        }
+    List {
+      ForEach(urls, id: \.self) { url in
+        ImageView(in: queue, for: url)
+          .padding()
       }
     }
+    .listStyle(.plain)
     .task {
       loadPhotoUrls()
     }

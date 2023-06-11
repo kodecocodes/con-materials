@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D21B51CC29F4A52F0055157A /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B51CB29F4A52F0055157A /* AsyncOperation.swift */; };
-		D21D270D29F5DEC600BFF56D /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D270C29F5DEC600BFF56D /* ImageDataProvider.swift */; };
 		D2A721A129BCE26B0021A4C5 /* TiltShiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721A029BCE26B0021A4C5 /* TiltShiftApp.swift */; };
 		D2A721A329BCE26B0021A4C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721A229BCE26B0021A4C5 /* ContentView.swift */; };
 		D2A721A529BCE26C0021A4C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A721A429BCE26C0021A4C5 /* Assets.xcassets */; };
@@ -20,11 +19,11 @@
 		D2A721B929BCEE580021A4C5 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A721B829BCEE580021A4C5 /* ImageView.swift */; };
 		D2DC537629F4A63A00D47544 /* NetworkImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC537529F4A63A00D47544 /* NetworkImageOperation.swift */; };
 		D2FA847F29BCFBDD00B39695 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2FA847E29BCFBDD00B39695 /* Photos.plist */; };
+		F50BEA8C2A360963009F87A5 /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BEA8B2A360963009F87A5 /* ImageDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D21B51CB29F4A52F0055157A /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
-		D21D270C29F5DEC600BFF56D /* ImageDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataProvider.swift; sourceTree = "<group>"; };
 		D2A7219D29BCE26B0021A4C5 /* TiltShift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiltShift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A721A029BCE26B0021A4C5 /* TiltShiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftApp.swift; sourceTree = "<group>"; };
 		D2A721A229BCE26B0021A4C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +36,7 @@
 		D2A721B829BCEE580021A4C5 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		D2DC537529F4A63A00D47544 /* NetworkImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageOperation.swift; sourceTree = "<group>"; };
 		D2FA847E29BCFBDD00B39695 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
+		F50BEA8B2A360963009F87A5 /* ImageDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,6 @@
 				D21B51CB29F4A52F0055157A /* AsyncOperation.swift */,
 				D2A721A229BCE26B0021A4C5 /* ContentView.swift */,
 				D2A721AE29BCE56E0021A4C5 /* ExampleView.swift */,
-				D21D270C29F5DEC600BFF56D /* ImageDataProvider.swift */,
 				D2A721B829BCEE580021A4C5 /* ImageView.swift */,
 				D2DC537529F4A63A00D47544 /* NetworkImageOperation.swift */,
 				D2A721B429BCEC550021A4C5 /* TableView.swift */,
@@ -84,6 +83,7 @@
 				D2A721B229BCEC120021A4C5 /* TiltShiftOperation.swift */,
 				D2A721A429BCE26C0021A4C5 /* Assets.xcassets */,
 				D2A721A629BCE26C0021A4C5 /* Preview Content */,
+				F50BEA8B2A360963009F87A5 /* ImageDataProvider.swift */,
 			);
 			path = TiltShift;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 			files = (
 				D2A721B329BCEC120021A4C5 /* TiltShiftOperation.swift in Sources */,
 				D2A721B529BCEC550021A4C5 /* TableView.swift in Sources */,
-				D21D270D29F5DEC600BFF56D /* ImageDataProvider.swift in Sources */,
+				F50BEA8C2A360963009F87A5 /* ImageDataProvider.swift in Sources */,
 				D2DC537629F4A63A00D47544 /* NetworkImageOperation.swift in Sources */,
 				D2A721A329BCE26B0021A4C5 /* ContentView.swift in Sources */,
 				D2A721B129BCE8360021A4C5 /* TiltShiftFilter.swift in Sources */,
@@ -306,7 +306,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TiltShift/Preview Content\"";
-				DEVELOPMENT_TEAM = BQUPLV7KWS;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

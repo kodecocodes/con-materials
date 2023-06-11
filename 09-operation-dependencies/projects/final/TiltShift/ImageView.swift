@@ -22,17 +22,17 @@ struct ImageView: View {
 
   private func tiltShiftImage() {
     let downloadOp = NetworkImageOperation(url: url)
-    let tiltShiftOp = TiltShiftOperation()
-    tiltShiftOp.addDependency(downloadOp)
+    let op = TiltShiftOperation()
+    op.addDependency(downloadOp)
 
-    tiltShiftOp.onImageProcessed = { uiImage in
+    op.onImageProcessed = { uiImage in
       if let uiImage {
         image = Image(uiImage: uiImage)
       }
     }
 
     queue.addOperation(downloadOp)
-    queue.addOperation(tiltShiftOp)
+    queue.addOperation(op)
   }
 }
 

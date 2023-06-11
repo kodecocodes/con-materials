@@ -4,12 +4,10 @@ final class TiltShiftOperation: Operation {
   /// Callback which will be run *on the main thread*
   /// when the operation completes.
   var onImageProcessed: ((UIImage?) -> Void)?
-
-  private static let context = CIContext()
-
   var outputImage: UIImage?
 
   private let inputImage: UIImage?
+  private static let context = CIContext()
 
   init(image: UIImage? = nil) {
     inputImage = image
@@ -47,5 +45,5 @@ final class TiltShiftOperation: Operation {
 }
 
 extension TiltShiftOperation: ImageDataProvider {
-  var image: UIImage? { return outputImage }
+  var image: UIImage? { outputImage }
 }
