@@ -30,7 +30,6 @@ final class TiltShiftOperation: Operation {
     }
 
     guard !isCancelled else { return }
-
     let fromRect = CGRect(origin: .zero, size: inputImage.size)
     guard let cgImage = TiltShiftOperation.context.createCGImage(output, from: fromRect) else {
       print("No image generated")
@@ -38,7 +37,6 @@ final class TiltShiftOperation: Operation {
     }
 
     guard !isCancelled else { return }
-
     outputImage = UIImage(cgImage: cgImage)
 
     if let onImageProcessed {

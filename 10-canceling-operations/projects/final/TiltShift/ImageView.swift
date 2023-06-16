@@ -4,8 +4,8 @@ struct ImageView: View {
   let url: URL
   let queue: OperationQueue
 
-  @State private var operations: [Operation] = []
   @State private var image = Image(systemName: "photo")
+  @State private var operations: [Operation] = []
 
   var body: some View {
     image
@@ -29,13 +29,12 @@ struct ImageView: View {
     let tiltShiftOp = TiltShiftOperation()
     tiltShiftOp.addDependency(downloadOp)
 
+    operations = [downloadOp, tiltShiftOp]
     tiltShiftOp.onImageProcessed = { uiImage in
       if let uiImage {
         image = Image(uiImage: uiImage)
       }
     }
-
-    operations = [downloadOp, tiltShiftOp]
 
     queue.addOperation(downloadOp)
     queue.addOperation(tiltShiftOp)
