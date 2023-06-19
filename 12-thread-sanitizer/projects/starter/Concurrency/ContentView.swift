@@ -19,14 +19,14 @@ struct ContentView: View {
     var count = 0
 
     queue.async {
-      for _ in 1 ... 100_000 {
-        Thread.sleep(forTimeInterval: 0.1)
+      for _ in 1...100_000 {
+        // Thread.sleep(forTimeInterval: 0.1)
         count += 1
       }
     }
 
     DispatchQueue.main.async {
-      for _ in 1 ... 100_000 {
+      for _ in 1...100_000 {
         count += 1
       }
 
