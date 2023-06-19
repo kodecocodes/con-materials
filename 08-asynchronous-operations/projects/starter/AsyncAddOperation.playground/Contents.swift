@@ -1,4 +1,4 @@
-/// Copyright (c) 2019 Razeware LLC
+/// Copyright (c) 2023 Kodeco, Inc.
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -18,6 +18,10 @@
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
 ///
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
+///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 /// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -29,17 +33,12 @@
 import Foundation
 
 class AsyncOperation: Operation {
-  // Create state management
-  
-  // Override properties
-  
-  // Override start
-}
 
+}
 /*:
  AsyncSumOperation simply adds two numbers together asynchronously and assigns the result. It sleeps for two seconds just so that you can
  see the random ordering of the operation.  Nothing guarantees that an operation will complete in the order it was added.
- 
+
  - important:
  Notice that `self.state` is being set to `.finished`. What would happen if you left this line out?
  */
@@ -47,14 +46,14 @@ class AsyncSumOperation: AsyncOperation {
   let rhs: Int
   let lhs: Int
   var result: Int?
-  
+
   init(lhs: Int, rhs: Int) {
     self.lhs = lhs
     self.rhs = rhs
-    
+
     super.init()
   }
-  
+
   override func main() {
     DispatchQueue.global().async {
       Thread.sleep(forTimeInterval: 2)
@@ -74,10 +73,9 @@ pairs.forEach { pair in
     guard let result = op.result else { return }
     print("\(pair.0) + \(pair.1) = \(result)")
   }
-  
+
   queue.addOperation(op)
 }
 
 //: This prevents the playground from finishing prematurely.  Never do this on a main UI thread!
 queue.waitUntilAllOperationsAreFinished()
-
