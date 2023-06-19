@@ -28,6 +28,7 @@ struct ContentView: View {
 
       Text(display)
     }
+    .padding()
     .alert(item: $alert) { message in
       Alert(title: Text(message.message), dismissButton: .cancel())
     }
@@ -84,7 +85,7 @@ struct ContentView: View {
       let deleteRequest = NSBatchDeleteRequest(fetchRequest: Number.fetchRequest())
       _ = try? context.execute(deleteRequest)
 
-      for num in 1 ... max {
+      for num in 1...max {
         let entity = Number(context: context)
         entity.value = num
         entity.display = formatter.string(from: NSNumber(value: num))
@@ -132,8 +133,6 @@ struct ContentView: View {
       } else {
         userInfo["objectID"] = entity.objectID
       }
-
-      let ui = ["object": entity]
 
       Notification.Name.coreDataEntity.post(userInfo: userInfo)
     }
